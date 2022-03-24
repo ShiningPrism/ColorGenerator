@@ -19,7 +19,7 @@ class color extends JFrame {
         Color c = new Color(255,255,255);
 
         JPanel p = new JPanel();
-        JButton b1;
+        JButton b1, b2;
 
         b1 = new JButton("Click to generate color");
         b1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -37,9 +37,18 @@ class color extends JFrame {
                 }
             }
         });
+        b2 = new JButton("Exit");
+        b2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                b2.doClick(); {
+                    System.exit(0);
+                }
+            }
+        });
         add(p);
         p.setBackground(c);
         p.add(b1);
+        p.add(b2);
         show();
     }
 }
