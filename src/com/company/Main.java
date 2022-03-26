@@ -3,9 +3,7 @@ package com.company;
 import java.util.Random;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.Toolkit;
+import java.awt.datatransfer.*;
 
 public class Main {
     public static void main(String[] args) {
