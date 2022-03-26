@@ -52,9 +52,17 @@ class color extends JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 b3.doClick(); {
                     String myString = b1.getText();
-                    StringSelection stringSelection = new StringSelection(myString);
-                    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                    clipboard.setContents(stringSelection, null);
+                    if(myString.equals("Click to generate color")) {
+                        String clipboardStr = "You found the secret... congratulations!";
+                        StringSelection stringSelection = new StringSelection(clipboardStr);
+                        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                        clipboard.setContents(stringSelection, null);
+                    } else {
+                        String clipboardStr = b1.getText();
+                        StringSelection stringSelection = new StringSelection(clipboardStr);
+                        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                        clipboard.setContents(stringSelection, null);
+                    }
                 }
             }
         });
